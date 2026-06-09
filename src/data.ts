@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
       "A responsive portfolio website built with modern web technologies to present professional experience, projects, education, and technical skills.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     category: "Web App",
-    github: "https://github.com/tharhtetzaw006",
+    github: "https://github.com/tharhtetzaw006/THZ_portfolio",
     gradient: "from-slate-500 to-sky-500",
     featured: false,
   },
