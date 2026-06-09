@@ -104,13 +104,13 @@ Coming Soon
 
 **Thar Htet Zaw**
 
-Email: [your-email@example.com](mailto:your-email@example.com)
+Email: tharhtetzaw37@gmail.com
 
 GitHub:
 https://github.com/tharhtetzaw006
 
 LinkedIn:
-(Add your LinkedIn URL)
+https://www.linkedin.com/in/tharhtetzaw/
 
 ---
 
