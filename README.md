@@ -1,20 +1,121 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🚀 Thar Htet Zaw Portfolio
 
-# Run and deploy your AI Studio app
+A modern, responsive, and interactive personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-This contains everything you need to run your app locally.
+## 🌟 About
 
-View your app in AI Studio: https://ai.studio/apps/a2064851-97a8-4eb0-9abd-0823fd9a087a
+This portfolio showcases my:
 
-## Run Locally
+* Software Development Projects
+* Technical Skills
+* Certifications
+* Achievements & Awards
+* Educational Background
+* Contact Information
 
-**Prerequisites:**  Node.js
+The website is designed with a modern UI/UX experience, smooth animations, and responsive layouts for all devices.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 15
+* React
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+
+### Tools & Platforms
+
+* Git & GitHub
+* Vercel
+* VS Code
+
+---
+
+## ✨ Features
+
+* Modern Responsive Design
+* Interactive Animations
+* Project Showcase
+* Certificate Gallery
+* Achievement Section
+* Contact Section
+* Mobile Friendly Layout
+* Fast Performance
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+ ├── app/
+ ├── components/
+ ├── data.ts
+ ├── types.ts
+
+public/
+ ├── certificates/
+ ├── projects/
+ ├── me.jpg
+```
+
+---
+
+## 📜 Certifications
+
+Featured certifications from:
+
+* IBM
+* Coursera
+* AWS Community Events
+* Oracle Academy
+* TCS iON
+* British Council
+* Sharda University
+* Gusto Innovation Forum
+
+---
+
+## 🎓 Education
+
+### Bachelor of Technology (B.Tech)
+
+Computer Science & Engineering
+
+Sharda University, India
+
+### Level 3 & Level 4 Diploma
+
+Gusto University
+
+---
+
+## 🌐 Live Website
+
+Coming Soon
+
+---
+
+## 📫 Contact
+
+**Thar Htet Zaw**
+
+Email: [your-email@example.com](mailto:your-email@example.com)
+
+GitHub:
+https://github.com/tharhtetzaw006
+
+LinkedIn:
+(Add your LinkedIn URL)
+
+---
+
+## © License
+
+This project is created and maintained by Thar Htet Zaw.
+All rights reserved.
+
