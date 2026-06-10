@@ -17,7 +17,7 @@ export default function Education() {
         subtitle="Academic background, key coursework, and educational experiences that have built my foundation in computer science and software development."
       />
 
-      <div className="mt-8 max-w-4xl">
+      <div className="mt-8 w-full max-w-4xl">
         {EDUCATION_DATA.map((edu, index) => (
           <motion.div
             key={edu.id}
@@ -25,7 +25,7 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="p-6 sm:p-8 rounded-3xl bg-glass border border-glass-border backdrop-blur-glass relative overflow-hidden"
+            className="mb-8 p-6 sm:p-8 rounded-3xl bg-glass border border-glass-border backdrop-blur-glass relative overflow-hidden"
           >
             {/* Ambient decorative grid gradient background */}
             <div className="absolute inset-0 bg-chart-gradient opacity-10 pointer-events-none" />
@@ -57,7 +57,7 @@ export default function Education() {
                     <BookOpen className="w-3.5 h-3.5 text-zinc-500" /> Relevant
                     Coursework
                   </h4>
-                  <div className="flex flex-wrap gap-2 max-h-24 overflow-hidden">
+                  <div className="flex flex-wrap gap-2">
                     {edu.courses.map((course) => (
                       <span
                         key={course}
@@ -71,7 +71,7 @@ export default function Education() {
               </div>
 
               {/* Sidebar Info: GPA & Duration */}
-              <div className="flex flex-col gap-3 min-w-[200px] md:text-right border-t md:border-t-0 border-white/5 pt-4 md:pt-0">
+              <div className="flex flex-col gap-3 md:min-w-[200px] md:text-right border-t md:border-t-0 border-white/5 pt-4 md:pt-0">
                 <div className="flex items-center gap-2 md:justify-end text-zinc-400 font-mono text-xs">
                   <Calendar className="w-3.5 h-3.5" />
                   <span>{edu.duration}</span>

@@ -219,7 +219,7 @@ export default function Hero() {
                 ease: "easeInOut",
               },
             }}
-            className="relative w-full h-[650px] sm:h-[800px] lg:h-[95vh] xl:h-[100vh] flex items-center justify-center z-10"
+            className="relative w-full h-[500px] sm:h-[650px] lg:h-[650px] xl:h-[700px] flex items-center justify-center z-10 -mt-8 lg:-mt-50"
           >
             {/* Shadow */}
             <div className="absolute bottom-6 w-[55%] h-6 bg-black/60 blur-[25px] rounded-full pointer-events-none z-0" />
@@ -239,7 +239,7 @@ export default function Hero() {
                 quality={100}
                 referrerPolicy="no-referrer"
                 sizes="(max-width:768px) 100vw, 800px"
-                className="object-contain origin-bottom"
+                className="object-contain object-bottom"
               />
 
               {/* Light Sweep */}

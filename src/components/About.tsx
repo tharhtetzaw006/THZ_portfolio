@@ -325,7 +325,7 @@ export default function About() {
                         scale: 1.02,
                       }}
                       transition={{ duration: 0.2 }}
-                      className="p-6 rounded-2xl bg-zinc-950/40 border border-white/[0.05] backdrop-blur-sm hover:border-sky-500/20 transition-all duration-300 max-w-sm w-full relative"
+                      className="p-6 rounded-2xl bg-zinc-950/40 border border-white/[0.05] backdrop-blur-sm hover:border-sky-500/20 transition-all duration-300 w-full relative"
                     >
                       {/* Timeline Dot */}
                       <motion.span
