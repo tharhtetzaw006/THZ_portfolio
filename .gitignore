@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Next.js
+.next/
+out/
+
+.env*
+!.env.example

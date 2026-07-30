@@ -1,0 +1,6 @@
+{
+  "name": "Developer Portfolio",
+  "description": "A premium, dark-themed interactive personal portfolio website showcasing projects, skills, education, and achievements with high-fidelity transitions and modern design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
