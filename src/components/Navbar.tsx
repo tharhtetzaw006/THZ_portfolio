@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Terminal } from "lucide-react";
-import { PERSONAL_INFO } from "../data";
 import Image from "next/image";
 
 const navItems = [
@@ -49,22 +48,38 @@ export default function Navbar() {
   }, []);
 
   const handleNavClick = (id: string) => {
-    setMobileMenuOpen(false);
     const element = document.getElementById(id);
-    if (element) {
-      // Handle custom smooth offsets for headers
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setActiveSection(id);
+    setMobileMenuOpen(false);
+
+    if (element) {
+      setTimeout(() => {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+
+        setActiveSection(id);
+      }, 250);
     }
   };
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <>
@@ -137,17 +152,15 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Hamburger toggle button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
+          {!mobileMenuOpen && (
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-white hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+              aria-label="Open menu"
+            >
               <Menu className="w-5 h-5" />
-            )}
-          </button>
+            </button>
+          )}
         </div>
       </header>
 
@@ -158,10 +171,18 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-black/90 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-[9999] h-screen w-screen overflow-y-auto bg-black md:hidden"
           >
-            <div className="flex flex-col h-full justify-between px-6 py-24 select-none">
-              <nav className="space-y-6 flex flex-col items-center">
+            <div className="absolute top-6 right-6 z-10">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 active:scale-95 transition-all"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="min-h-screen flex flex-col px-6 pt-24 pb-8">
+              <nav className="flex-1 overflow-y-auto space-y-6 flex flex-col">
                 {navItems.map((item, index) => {
                   const isActive = activeSection === item.id;
                   return (
@@ -185,18 +206,6 @@ export default function Navbar() {
                   );
                 })}
               </nav>
-
-              <div className="flex flex-col gap-4 text-center">
-                <button
-                  onClick={() => handleNavClick("contact")}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] hover:from-[#7dd3fc] hover:to-[#38bdf8] text-black font-medium shadow-[0_4px_20px_rgba(56,189,248,0.25)] cursor-pointer"
-                >
-                  Contact Me
-                </button>
-                <p className="text-zinc-500 text-xs font-mono">
-                  {PERSONAL_INFO.email}
-                </p>
-              </div>
             </div>
           </motion.div>
         )}
