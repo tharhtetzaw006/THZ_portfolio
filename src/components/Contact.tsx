@@ -94,9 +94,10 @@ export default function Contact() {
                 <span className="font-mono text-[9px] uppercase tracking-wider text-zinc-500 block">
                   Base of Actions
                 </span>
-                <span className="text-xs sm:text-sm font-medium text-white">
-                  Yangon, Myanmar
-                </span>
+                <div className="text-xs sm:text-sm font-medium text-white leading-relaxed">
+                  <p>Yangon, Myanmar (Home)</p>
+                  <p>Greater Noida, India (Current)</p>
+                </div>
               </div>
             </div>
           </div>

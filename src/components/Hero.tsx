@@ -218,7 +218,7 @@ export default function Hero() {
                 alt="Thar Htet Zaw"
                 fill
                 priority
-                quality={80}
+                quality={100}
                 referrerPolicy="no-referrer"
                 sizes="(max-width:768px) 100vw, 800px"
                 className="object-contain object-bottom"

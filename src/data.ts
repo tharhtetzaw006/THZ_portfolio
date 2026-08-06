@@ -295,6 +295,26 @@ export const CERTIFICATIONS: CertificationItem[] = [
     colorClass: "from-indigo-500 to-blue-500",
     image: "/certificates/cert12.png",
   },
+  {
+    id: "cert-13",
+    title: "Web Development Course Completion",
+    issuer: "SkillOrbit",
+    date: "Jun 2026",
+    credentialId: "SO26CC00586",
+    url: "#",
+    colorClass: "from-violet-500 to-cyan-500",
+    image: "/certificates/cert13.png",
+  },
+  {
+    id: "cert-14",
+    title: "Internship Completion",
+    issuer: "SkillOrbit",
+    date: "Jun 2026",
+    credentialId: "SO26CC00586",
+    url: "#",
+    colorClass: "from-fuchsia-500 to-violet-500",
+    image: "/certificates/cert14.png",
+  },
 ];
 
 export const ACHIEVEMENTS: AchievementItem[] = [

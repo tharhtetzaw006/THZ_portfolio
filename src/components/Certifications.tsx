@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import SectionHeader from "./SectionHeader";
-import { X } from "lucide-react";
 
 import { CERTIFICATIONS } from "../data";
 import MarqueeRow from "./MarqueeRow";
@@ -102,42 +101,6 @@ export default function Certifications() {
           onClick={() => setSelectedCertificate(null)}
         >
           <div className="relative" onClick={(e) => e.stopPropagation()}>
-            <h3 className="mb-5 text-center text-2xl font-bold tracking-wide text-white">
-              {selectedCertificate.title}
-            </h3>
-
-            <button
-              onClick={() => setSelectedCertificate(null)}
-              className="absolute -top-10 -right-12 z-50
-flex h-10 w-10
-items-center justify-center
-rounded-full
-bg-zinc-900/90
-border border-white/20
-backdrop-blur-md
-text-white
-shadow-lg
-transition-all
-duration-200
-hover:scale-110
-hover:bg-zinc-800"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <h3
-              className="
-    absolute
-    -top-14
-    left-1/2
-    -translate-x-1/2
-    whitespace-nowrap
-    text-2xl
-    font-bold
-    text-white
-  "
-            ></h3>
-
             <Image
               src={selectedCertificate.image}
               alt={selectedCertificate.title}
